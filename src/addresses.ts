@@ -145,6 +145,31 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x8357227D4eDc78991Db6FDB9bD6ADE250536dE1d'
 }
 
+// {
+//   "v3CoreFactoryAddress":"0xE12b00681dD2e90f51d9Edf55CE1A7D171338165",
+//   "multicall2Address":"0xF20200B941Cfee64D6e07f2abe75887bfC2a8a0D",
+//   "proxyAdminAddress":"0x456b6feA5a362C0A507C79976Ed9e23d988Cc70C",
+//   "tickLensAddress":"0x07685F75c6172DB0Dd9a03Fcc3258d6Ade0F370d",
+//   "nftDescriptorLibraryAddressV1_3_0":"0xc1B52dfdF885F3f275429f34006C2F7Ad8fCb96E",
+//   "nonfungibleTokenPositionDescriptorAddressV1_3_0":"0xc6a659ee0FAC8D61431776E5D9573Baf057Cd020",
+//   "descriptorProxyAddress":"0xCdE6C1953d5Da7f78Dd91784227B1F9aF109c40F",
+//   "nonfungibleTokenPositionManagerAddress":"0x9C8D29B9e02A22704dFC986C385b1eB298B83Acf",
+//   "v3MigratorAddress":"0x06bbc9b0dD1Ad3C0F965B9c421919Df20b4583dE",
+//   "v3StakerAddress":"0xf37252e941F5Fb78AFd9dA971344cC2A7260D4E6",
+//   "quoterV2Address":"0x9A037Bf3c6E35a4FcB2a94DbbFC8013CFc9FF50a",
+//   "swapRouter02":"0x5Cf0020FEc05770cadF64fe97a915f100d541869"
+// }
+
+const BTTC_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0xE12b00681dD2e90f51d9Edf55CE1A7D171338165',
+  multicallAddress: '0xF20200B941Cfee64D6e07f2abe75887bfC2a8a0D',
+  quoterAddress: '0x9A037Bf3c6E35a4FcB2a94DbbFC8013CFc9FF50a',
+  v3MigratorAddress: '0x06bbc9b0dD1Ad3C0F965B9c421919Df20b4583dE',
+  nonfungiblePositionManagerAddress: '0x9C8D29B9e02A22704dFC986C385b1eB298B83Acf',
+  tickLensAddress: '0x07685F75c6172DB0Dd9a03Fcc3258d6Ade0F370d',
+  swapRouter02Address: '0x5Cf0020FEc05770cadF64fe97a915f100d541869'
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -160,7 +185,8 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.SEPOLIA]: SEPOLIA_ADDRESSES,
   [ChainId.AVALANCHE]: AVALANCHE_ADDRESSES,
   [ChainId.BASE]: BASE_ADDRESSES,
-  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES
+  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES,
+  [ChainId.BIT_TORRENT_MAINNET]: BTTC_ADDRESSES
 }
 
 /* V3 Contract Addresses */
