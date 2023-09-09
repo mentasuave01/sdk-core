@@ -33,9 +33,22 @@ export const UNI_ADDRESSES: AddressMap = constructSameAddressMap('0x1f9840a85d5a
 export const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26197C432AFe78'
 
 export const V2_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
-export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS)
+export const V2_FACTORY_ADDRESSES: AddressMap = 
+{
+  ...constructSameAddressMap(V2_FACTORY_ADDRESS),
+  [ChainId.BIT_TORRENT_MAINNET]: '0xee4bc42157cf65291ba2fe839ae127e3cc76f741',
+}
+
+export const V2_FACTORY_INIT_HASH: AddressMap = {
+  ...constructSameAddressMap('0xcdf2deca40a0bd56de8e3ce5c7df6727e5b1bf2ac96f283fa9c4b3e6b42ea9d2'),
+  [ChainId.BIT_TORRENT_MAINNET]: '0x143b7504e2b4eb34ed3cf725a14720c008dff8cd992e32c0eccd639c183ad602'
+}
+
 export const V2_ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
-export const V2_ROUTER_ADDRESSES: AddressMap = constructSameAddressMap(V2_ROUTER_ADDRESS)
+export const V2_ROUTER_ADDRESSES: AddressMap = {
+  ...constructSameAddressMap(V2_ROUTER_ADDRESS),
+  [ChainId.BIT_TORRENT_MAINNET]: '0x1be40073083d753f1eeFd87b03461221c35492C3'
+} 
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
 const DEFAULT_ADDRESSES: ChainAddresses = {
@@ -145,6 +158,31 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x8357227D4eDc78991Db6FDB9bD6ADE250536dE1d'
 }
 
+// {
+//   "v3CoreFactoryAddress":"0xE12b00681dD2e90f51d9Edf55CE1A7D171338165",
+//   "multicall2Address":"0xF20200B941Cfee64D6e07f2abe75887bfC2a8a0D",
+//   "proxyAdminAddress":"0x456b6feA5a362C0A507C79976Ed9e23d988Cc70C",
+//   "tickLensAddress":"0x07685F75c6172DB0Dd9a03Fcc3258d6Ade0F370d",
+//   "nftDescriptorLibraryAddressV1_3_0":"0xc1B52dfdF885F3f275429f34006C2F7Ad8fCb96E",
+//   "nonfungibleTokenPositionDescriptorAddressV1_3_0":"0xc6a659ee0FAC8D61431776E5D9573Baf057Cd020",
+//   "descriptorProxyAddress":"0xCdE6C1953d5Da7f78Dd91784227B1F9aF109c40F",
+//   "nonfungibleTokenPositionManagerAddress":"0x9C8D29B9e02A22704dFC986C385b1eB298B83Acf",
+//   "v3MigratorAddress":"0x06bbc9b0dD1Ad3C0F965B9c421919Df20b4583dE",
+//   "v3StakerAddress":"0xf37252e941F5Fb78AFd9dA971344cC2A7260D4E6",
+//   "quoterV2Address":"0x9A037Bf3c6E35a4FcB2a94DbbFC8013CFc9FF50a",
+//   "swapRouter02":"0x5Cf0020FEc05770cadF64fe97a915f100d541869"
+// }
+
+const BTTC_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0xE12b00681dD2e90f51d9Edf55CE1A7D171338165',
+  multicallAddress: '0xF20200B941Cfee64D6e07f2abe75887bfC2a8a0D',
+  quoterAddress: '0x9A037Bf3c6E35a4FcB2a94DbbFC8013CFc9FF50a',
+  v3MigratorAddress: '0x06bbc9b0dD1Ad3C0F965B9c421919Df20b4583dE',
+  nonfungiblePositionManagerAddress: '0x9C8D29B9e02A22704dFC986C385b1eB298B83Acf',
+  tickLensAddress: '0x07685F75c6172DB0Dd9a03Fcc3258d6Ade0F370d',
+  swapRouter02Address: '0x5Cf0020FEc05770cadF64fe97a915f100d541869'
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -160,7 +198,8 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.SEPOLIA]: SEPOLIA_ADDRESSES,
   [ChainId.AVALANCHE]: AVALANCHE_ADDRESSES,
   [ChainId.BASE]: BASE_ADDRESSES,
-  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES
+  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES,
+  [ChainId.BIT_TORRENT_MAINNET]: BTTC_ADDRESSES
 }
 
 /* V3 Contract Addresses */
