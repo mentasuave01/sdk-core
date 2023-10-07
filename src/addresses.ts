@@ -33,9 +33,22 @@ export const UNI_ADDRESSES: AddressMap = constructSameAddressMap('0x1f9840a85d5a
 export const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26197C432AFe78'
 
 export const V2_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
-export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS)
+export const V2_FACTORY_ADDRESSES: AddressMap = 
+{
+  ...constructSameAddressMap(V2_FACTORY_ADDRESS),
+  [ChainId.BIT_TORRENT_MAINNET]: '0xee4bc42157cf65291ba2fe839ae127e3cc76f741',
+}
+
+export const V2_FACTORY_INIT_HASH: AddressMap = {
+  ...constructSameAddressMap('0xcdf2deca40a0bd56de8e3ce5c7df6727e5b1bf2ac96f283fa9c4b3e6b42ea9d2'),
+  [ChainId.BIT_TORRENT_MAINNET]: '0x143b7504e2b4eb34ed3cf725a14720c008dff8cd992e32c0eccd639c183ad602'
+}
+
 export const V2_ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
-export const V2_ROUTER_ADDRESSES: AddressMap = constructSameAddressMap(V2_ROUTER_ADDRESS)
+export const V2_ROUTER_ADDRESSES: AddressMap = {
+  ...constructSameAddressMap(V2_ROUTER_ADDRESS),
+  [ChainId.BIT_TORRENT_MAINNET]: '0x1be40073083d753f1eeFd87b03461221c35492C3'
+} 
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
 const DEFAULT_ADDRESSES: ChainAddresses = {
