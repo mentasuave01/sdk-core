@@ -49,6 +49,8 @@ export const V2_FACTORY_INIT_HASH: AddressMap = {
 }
 
 export const V2_ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
+
+// Liquidity brewer address
 export const V2_ROUTER_ADDRESSES: AddressMap = {
   ...constructSameAddressMap(V2_ROUTER_ADDRESS),
   [ChainId.BIT_TORRENT_MAINNET]: '0x1be40073083d753f1eeFd87b03461221c35492C3'
@@ -186,7 +188,8 @@ const BTTC_ADDRESSES: ChainAddresses = {
   v3MigratorAddress: '0x06bbc9b0dD1Ad3C0F965B9c421919Df20b4583dE',
   nonfungiblePositionManagerAddress: '0x9C8D29B9e02A22704dFC986C385b1eB298B83Acf',
   tickLensAddress: '0x07685F75c6172DB0Dd9a03Fcc3258d6Ade0F370d',
-  swapRouter02Address: '0x5Cf0020FEc05770cadF64fe97a915f100d541869'
+  swapRouter02Address: '0x5Cf0020FEc05770cadF64fe97a915f100d541869',
+  v1MixedRouteQuoterAddress: '0x4A1057E744bfA75fF063449dB580C447D9e39FdD'
 }
 const FTM_ADDRESSES: ChainAddresses = {
   v3CoreFactoryAddress: '0x7928a2c48754501f3a8064765ECaE541daE5c3E6',
