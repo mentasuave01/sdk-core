@@ -1,7 +1,7 @@
 {
-  "name": "@spookyswaptest-er/sdk-core",
+  "name": "@spookyswaptest/sdk-core",
   "license": "MIT",
-  "version": "2.0.2",
+  "version": "1.0.10",
   "description": "An SDK for building applications on top of V3",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
