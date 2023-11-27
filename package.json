@@ -18,10 +18,10 @@
   ],
   "module": "dist/sdk-core.esm.js",
   "scripts": {
-    "build": "tsdx build",
-    "start": "tsdx watch",
-    "test": "tsdx test",
-    "prepublishOnly": "tsdx build"
+    "build": "dts build",
+    "start": "dts watch",
+    "test": "dts test",
+    "prepublishOnly": "dts build"
   },
   "dependencies": {
     "@ethersproject/address": "^5.0.2",
@@ -34,7 +34,11 @@
   "devDependencies": {
     "@types/big.js": "^4.0.5",
     "@types/jest": "^24.0.25",
-    "tsdx": "^0.14.1"
+    "dts-cli": "^2.0.3",
+    "yarn-audit-fix": "^10.0.7"
+  },
+  "resolutions": {
+    "ansi-regex": "5.0.1"
   },
   "engines": {
     "node": ">=10"
